@@ -8,23 +8,7 @@ app.set("view engine", "ejs");
 var campgrounds = [
     {name: "Salmonela Mountain", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
     {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
-    {name: "Mountain Hill", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"},
+
     {name: "Mountain Goat's Rest", image: "https://farm1.staticflickr.com/130/321487195_ff34bde2f5.jpg"}
   ];
 
