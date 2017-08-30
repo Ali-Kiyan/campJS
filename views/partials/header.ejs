@@ -1,3 +1,4 @@
+<div class="bg">
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,12 +37,20 @@
    *{
     border-radius: 0 !important;
    }
-   body {
-     font-family: 'Josefin Sans', sans-serif !important;
-     text-align: center;
+   .bg{
      background-image: url("http://www.longcoveresort.com/sites/default/files/camping.jpg");
      background-repeat: no-repeat;
      background-size: cover;
+     background-attachment: fixed;
+     width: 100%;
+     height: 100%;
+     opacity: 0.8;
+   }
+
+   body {
+     font-family: 'Josefin Sans', sans-serif !important;
+     text-align: center;
+
    }
    form{
      margin: 30px auto;
