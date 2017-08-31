@@ -1,4 +1,3 @@
-<div class="bg">
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,24 +36,40 @@
    *{
     border-radius: 0 !important;
    }
-   .bg{
-     background-image: url("http://www.longcoveresort.com/sites/default/files/camping.jpg");
+   /*.bg{
+     background-image: url("");
      background-repeat: no-repeat;
      background-size: cover;
      background-attachment: fixed;
      width: 100%;
      height: 100%;
-     opacity: 0.8;
-   }
+   }*/
 
    body {
      font-family: 'Josefin Sans', sans-serif !important;
      text-align: center;
 
+
    }
    form{
      margin: 30px auto;
      width: 30%;
+   }
+   .page-bg {
+       background: url('http://www.longcoveresort.com/sites/default/files/camping.jpg');
+       background-size: cover;
+       background-repeat: no-repeat;
+       -webkit-filter: blur(2px);
+       -moz-filter: blur(2px);
+       -o-filter: blur(2px);
+       -ms-filter: blur(2px);
+       filter: blur(2px);
+       position: fixed;
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+       z-index: -1;
    }
 
    </style>
