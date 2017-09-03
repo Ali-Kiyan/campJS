@@ -5,11 +5,12 @@ var express          = require('express'),
       Campground     = require("./models/campground"),
       seedDB        = require("./seeds");
 //creating and connceting to the databse.
-seedDB();
+
 mongoose.connect("mongodb://localhost/camp_js");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+seedDB();
 
 
 
@@ -76,7 +77,7 @@ app.post("/campgrounds", function(req, res){
 });
 //SHOW - shows more info about one campground
 app.get("/campgrounds/:id", function(req, res){
-Campground.findById(req.params.id, function(err, foundCampground){
+Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
 if(err){
   console.log(err);
 }
