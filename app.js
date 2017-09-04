@@ -45,7 +45,7 @@ app.get("/campgrounds", function(req, res){
     console.log(err);
     }
     else{
-    res.render("index", {campgrounds : allCampgrounds});
+    res.render("campgrounds/index", {campgrounds : allCampgrounds});
     }
   });
 
@@ -55,7 +55,7 @@ app.get("/campgrounds", function(req, res){
 //CREATE - add new campground to DB
 app.get("/campgrounds/new", function(req, res){
 
-res.render("new.ejs");
+res.render("campgrounds/new");
 
 });
 //NEW - Show form to create new campground
@@ -82,12 +82,36 @@ if(err){
   console.log(err);
 }
 else{
-  res.render("show", {campground: foundCampground});
+  res.render("campgrounds/show", {campground: foundCampground});
 }
 });
 
 
 });
+
+//=============
+
+//comments routes
+
+//=============
+
+app.get("/campgrounds/:id/comments/new", function(req, res){
+  Campground.findById(req.params.id, function(err, campground){
+     if(err){
+       console.log(err);
+     }
+     else{
+       res.render("comments/new", {campground: campground});
+     }
+  });
+
+});
+
+app.post
+
+
+
+
 app.listen(3000, function(req, res){
 
 console.log("campJS Server is running ...");
