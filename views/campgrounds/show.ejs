@@ -1,12 +1,60 @@
 <% include ../partials/header %>
-<p><%= campground.name %></p>
-<img src="../<%= campground.image %>" width="20%" alt="">
-<p><%= campground.description %></p>
+<div class="container">
 
-<% campground.comments.forEach(function(comment){ %>
+   <div class="row">
 
-<p><%= comment.author %> - <%= comment.text %></p>
+     <div class="col-md-3">
+       <p class="lead">CampJS</p>
+       <div class="list-group black">
+         <li class="list-group-item active">Info1</li>
+         <li class="list-group-item">Info2</li>
+         <li class="list-group-item">Info3</li>
+       </div>
+     </div>
+     <div class="col-md-9 black">
+        <div class="thumbnail">
+          <img class="img-responsive" src="../<%= campground.image %>" alt="">
+          <div class="caption-full">
+            <h4 class="pull-right">£10.00</h4>
+            <h4><a class="black pull-left" href=""><%= campground.name %></a></h4>
+            <br>
+            <br>
+            <p><%= campground.description %></p>
+          </div>
+        </div>
+        <div class="well">
+              <div class="text-right">
+                <a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add new comments</a>
+              </div>
+              <hr>
+              <% campground.comments.forEach(function(comment){ %>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <span class="pull-left"><strong><%= comment.author %></strong></span>
+                      <span class="pull-right">10 days ago</span>
+                      <br>
+                      <br>
+                      <p><%= comment.text %></p>
+                    </div>
+                  </div>
+              <% }); %>
 
 
-<% }); %>
+        </div>
+
+
+
+     </div>
+
+   </div>
+
+
+
+
+
+
+
+
+</div>
+
 <% include ../partials/footer %>

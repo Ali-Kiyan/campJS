@@ -57,3 +57,21 @@
    .jumbotron {
      color: #000000;
    }
+   .black {
+     color : #000000 !important;
+   }
+br+p{
+  text-align: justify;
+}
+
+.thumbnail img {
+  width: 100%;
+  padding: 0;
+}
+.thumbnail{
+  padding: 0;
+
+}
+.thumbnail .caption-full{
+  padding: 2%;
+}
