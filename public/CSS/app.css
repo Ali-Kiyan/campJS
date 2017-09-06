@@ -79,10 +79,30 @@ br+p{
 .margin-top-small{
   margin-top: 2%;
 }
+.padding{
+  padding: 2%;
+}
 .glyphicon.glyphicon-tent{
     font-size: 3em;
     color: grey;
 }
+
+#delete-form{
+  display: inline;
+}
+#delete-form button{
+margin-left: 0.5%;
+}
+
+
+
+
+
+
+
+
+
+
 .TV{
   position: relative;
   animation-name: tva;
