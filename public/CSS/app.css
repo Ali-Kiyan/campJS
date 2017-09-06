@@ -75,3 +75,23 @@ br+p{
 .thumbnail .caption-full{
   padding: 2%;
 }
+.margin-top-big{
+  margin-top: 20%;
+}
+.margin-top-small{
+  margin-top: 2%;
+}
+.glyphicon.glyphicon-tent{
+    font-size: 3em;
+    color: grey;
+}
+.TV{
+  position: relative;
+  animation-name: tva;
+  animation-duration: 2s;
+
+}
+@keyframes tva {
+	0% { width: 1%;}
+	100% { width: 30%; }
+}
