@@ -31,13 +31,11 @@ router.post("/", function(req, res){
  res.redirect("campgrounds");
  }
  });
+});
+//NEW - Show form to create new campground
+router.get("/new", function(req, res){
 
- //NEW - Show form to create new campground
- router.get("/new", function(req, res){
-
- res.render("campgrounds/new");
-
- });
+res.render("campgrounds/new");
 
 });
 //SHOW - shows more info about one campground

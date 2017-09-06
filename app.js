@@ -15,11 +15,13 @@ var   commentRoutes   = require("./routes/comments"),
 
 //creating and connceting to the databse.
 
+mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/camp_js");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
-seedDB();
+
+// seedDB(); //seed database
 
 
 // PASSPORT CONFIGURATION
@@ -42,7 +44,7 @@ app.use(function(req, res, next){
   res.locals.currentUser = req.user;
   next();
 });
-//router use 
+//router use
 app.use("/", indexRoutes);
 // appending /campgrounds to the begining of all routes provided in campgroundRoutes
 app.use("/campgrounds", campgroundRoutes);
