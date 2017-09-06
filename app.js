@@ -29,6 +29,15 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// customized middleware
+// it passes the currentUser in every routes
+//it will call this function in every routes
+app.use(function(req, res, next){
+
+  res.locals.currentUser = req.user;
+  next();
+});
+
 
 
 // Campground.create(
@@ -56,7 +65,7 @@ res.render("landing");
 });
 //INDEX - SHOW ALL CAMPGROUNDS
 app.get("/campgrounds", function(req, res){
-
+  req.user
   Campground.find({},function(err, allCampgrounds){
     if(err){
     console.log(err);
