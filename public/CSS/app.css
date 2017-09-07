@@ -90,9 +90,6 @@ br+p{
 #delete-form{
   display: inline;
 }
-#delete-form button{
-margin-left: 0.5%;
-}
 
 
 
@@ -111,20 +108,23 @@ margin-left: 0.5%;
 .slow{
     -webkit-animation-duration: 3s !important;
     animation-duration: 3s !important;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
+    -webkit-animation-timing-function: cubic-bezier(1,-0.25, 0.09, 1.36);
+    animation-timing-function: cubic-bezier(1,-0.25, 0.09, 1.36);
     animation-name: slow;
     position: relative;
+    left: 5%;
 }
 @keyframes slow {
 
   from {
     background-color: #2c3e50;
     border-color: #34495e;
+    left: 2%;
   }
   to {
     background-color: #5cb85c;
     border-color: #4cae4c;
+    left: 5%;
   }
 
 }
