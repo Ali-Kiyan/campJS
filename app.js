@@ -41,8 +41,8 @@ passport.deserializeUser(User.deserializeUser());
 // customized middleware
 // it passes the currentUser in every routes
 //it will call this function in every routes
+//it adds currentUser to every sigle of our templetes
 app.use(function(req, res, next){
-
   res.locals.currentUser = req.user;
   next();
 });
