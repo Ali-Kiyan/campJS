@@ -8,6 +8,13 @@
    a{
      color : #ecf0f1;
    }
+   .btn-info{
+     background-color: #8f9090 !important;
+     border-color: #ffffff;
+   }
+   a:hover{
+     transition: 2s linear;
+   }
    /*.bg{
      background-image: url("");
      background-repeat: no-repeat;
