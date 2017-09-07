@@ -22,10 +22,6 @@
      text-align: center;
      color: whitesmoke;
 
-
-
-
-
    }
    form{
      margin: 30px auto;
@@ -91,7 +87,9 @@ br+p{
   display: inline;
 }
 
-
+.roundedC {
+  border-radius: 40px !important;
+}
 
 
 
@@ -125,6 +123,46 @@ br+p{
     background-color: #5cb85c;
     border-color: #4cae4c;
     left: 5%;
+  }
+
+}
+.flashS{
+  -webkit-animation-duration: 2s !important;
+  animation-duration: 2s !important;
+  -webkit-animation-timing-function: cubic-bezier(1,-0.25, 0.09, 1.36);
+  animation-timing-function: cubic-bezier(1,-0.25, 0.09, 1.36);
+  animation-name: flashS;
+  position: relative;
+}
+@keyframes flashS {
+
+  from {
+    background-color: #dff0aa;
+    border-color: #ecf0f1;
+  }
+  to {
+    background-color: #dff0d8 ;
+    border-color: #d6e9c6;
+  }
+
+}
+.flashD{
+  -webkit-animation-duration: 2s !important;
+  animation-duration: 2s !important;
+  -webkit-animation-timing-function: cubic-bezier(1,-0.25, 0.09, 1.36);
+  animation-timing-function: cubic-bezier(1,-0.25, 0.09, 1.36);
+  animation-name: flashD;
+  position: relative;
+}
+@keyframes flashD {
+
+  from {
+    background-color: #f2deaa;
+    border-color: #f39c12;
+  }
+  to {
+    background-color: #f2dede ;
+    border-color: #ebccd1;
   }
 
 }

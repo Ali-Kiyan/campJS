@@ -2,6 +2,7 @@ var express          = require('express'),
       app           = express(),
       bodyParser     = require("body-parser"),
       mongoose       = require("mongoose"),
+      flash          = require("connect-flash"),
       passport       = require("passport"),
       LocalStrategy  = require("passport-local"),
       methodOverride  = require("method-override")
@@ -21,6 +22,7 @@ mongoose.connect("mongodb://localhost/camp_js");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
+app.use(flash());
 app.set("view engine", "ejs");
 
 // seedDB(); //seed database
@@ -44,6 +46,8 @@ passport.deserializeUser(User.deserializeUser());
 //it adds currentUser to every sigle of our templetes
 app.use(function(req, res, next){
   res.locals.currentUser = req.user;
+  res.locals.error = req.flash("error");
+  res.locals.success = req.flash("success");
   next();
 });
 //router use
