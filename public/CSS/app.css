@@ -157,8 +157,8 @@ br+p{
 @keyframes flashD {
 
   from {
-    background-color: #f2deaa;
-    border-color: #f39c12;
+    background-color: #ffdddd;
+    border-color: #ffccd1;
   }
   to {
     background-color: #f2dede ;

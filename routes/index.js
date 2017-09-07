@@ -17,21 +17,23 @@ res.render("landing");
 //SHOW REGISTER FORM
 
 router.get("/register", function(req, res){
-
 res.render("register");
 });
 
 //HANDLE SIGN UP LOGIC
 router.post("/register", function(req, res){
-  var newUser = new User({username:req.body.username});
+
+  var newUser = new User({username: req.body.username});
   //provided by local mongoose package
-  User.register(newUser, req.body.password,function(err, user){
+  User.register(newUser, req.body.password, function(err, user){
    if(err){
-     console.log(err);
+     //here we are using return so flash messages is not working here
+     //  req.flash("error", errormsg);
      //to get out of the entire call back
-     return res.render("reigster");
+     return res.render("register", {error: err.message});
    }
      passport.authenticate("local")(req, res, function(){
+      req.flash("success", "Welcome to CampJS " + user.username);
       res.redirect("/campgrounds");
      });
   });
@@ -62,14 +64,4 @@ req.flash("success", "Successfully logged out");
 res.redirect("/campgrounds");
 
 });
-
-//isLoggedIn middleware
-function isLoggedIn(req, res, next){
-
-    if(req.isAuthenticated()){
-      return next();
-    }
-    res.redirect("/login");
-
-}
 module.exports = router;
