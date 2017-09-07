@@ -55,17 +55,13 @@ router.get("/:id", function(req, res){
 });
 
 // Edit Campground Route
-router.get("/:id/edit", function(req, res){
-    Campground.findById(req.params.id, function(err, foundCampground){
-        if(err){
-          res.redirect("/campgrounds");
-        }else{
-        res.render("campgrounds/edit", {campground: foundCampground});
-        }
-    });
+router.get("/:id/edit", checkCampgroundOwnership, function(req, res){
+      Campground.findById(req.params.id, function(err, foundCampground){
+            res.render("campgrounds/edit", {campground: foundCampground});
+      });
 });
 // Update campground Route
-router.put("/:id", function(req, res){
+router.put("/:id", checkCampgroundOwnership, function(req, res){
   Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCampground){
    if(err){
      res.redirect("/campgrounds");
@@ -78,11 +74,11 @@ router.put("/:id", function(req, res){
 
 // Destroy Campground Route
 
-router.delete("/:id", function(req, res){
+router.delete("/:id",checkCampgroundOwnership, function(req, res){
    Campground.findByIdAndRemove(req.params.id, function(err){
 
      if(err){
-       res.redirect("/campgrounds"); 
+       res.redirect("/campgrounds");
      }
      else{
        res.redirect("/campgrounds");
@@ -98,6 +94,29 @@ function isLoggedIn(req, res, next){
       return next();
     }
     res.redirect("/login");
+
+}
+function checkCampgroundOwnership(req, res, next){
+
+  // is user logged in
+  if(req.isAuthenticated()){
+    Campground.findById(req.params.id, function(err, foundCampground){
+        if(err){
+          res.redirect("back");
+        }else{
+          // does own the campground
+          //we use mongoose function to check the equality because user._id (string) and author.id(object) are not the same type
+          if(foundCampground.author.id.equals(req.user._id)){
+          next();
+          }else {
+            res.redirect("back");
+          }
+        }
+    });
+  }
+  else {
+    res.redirect("back");
+  }
 
 }
 
