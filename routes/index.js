@@ -52,7 +52,8 @@ res.render("login");
 router.post("/login", passport.authenticate("local",
  {
   successRedirect: "/campgrounds",
-  failureRedirect: "/login"
+  failureRedirect: "/login",
+  failureFlash: true // optional, see text as well
   }), function(req, res){
 });
 
