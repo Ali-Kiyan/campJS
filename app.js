@@ -18,7 +18,9 @@ var   commentRoutes   = require("./routes/comments"),
 //creating and connceting to the databse.
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/camp_js");
+// mongoose.connect("mongodb://localhost/camp_js");
+mongoose.connect("campjs:lion13@ds131384.mlab.com:31384/campjs");
+// mongodb://campjs:lion13@ds131384.mlab.com:31384/campjs
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
