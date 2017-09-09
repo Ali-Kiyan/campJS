@@ -72,9 +72,9 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //   }
 // });
 
+var port = process.env.PORT || 5000
 
-
-app.listen(3000, function(req, res){
+app.listen(port, function(req, res){
 
 console.log("campJS Server is running ...");
 
