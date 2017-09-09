@@ -214,3 +214,6 @@ i{
 .jumbotron.animated.fadeIn{
     animation-duration: 2s !important;
 }
+.btn-more{
+  padding: 1% 7% 1% 7%;
+}
