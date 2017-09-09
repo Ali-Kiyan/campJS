@@ -43,6 +43,7 @@
      font-family: 'Josefin Sans', sans-serif !important;
      text-align: center;
      color: whitesmoke;
+      background-color:  rgb(60, 69, 61);
 
    }
    form{
@@ -211,5 +212,5 @@ i{
   animation-duration: 2s !important;
 }
 .jumbotron.animated.fadeIn{
-    animation-duration: 4s !important;
+    animation-duration: 2s !important;
 }
