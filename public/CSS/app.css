@@ -1,3 +1,18 @@
+  @font-face {
+    font-family: 'glyphicons-halflings-regular';
+    src: url('glyphicons-halflings-regular.eot');
+    src: local('☺'),
+    url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('../fonts/glyphicons-halflings-regular.woff') format('woff2'),
+    url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('../fonts/glyphicons-halflings-regular.svg') format('svg');
+   }
+   @font-face {
+      font-family: 'Glyphicons Halflings';
+      src: url('../fonts/glyphicons-halflings-regular.eot');
+      src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+    }
+
    *{
     border-radius: 0 !important;
 
@@ -48,21 +63,42 @@
        height: 100%;
        z-index: -2;
    }
-   .navbar{
-     background-color: #4b4c40;
-
+   .navbar-default{
+     background-color: rgb(60, 69, 61);
+     border: 0;
+   }
+   .navbar-default .navbar-collapse, .navbar-default .navbar-form
+   {
+    border-color: rgb(69, 59, 51);
+   }
+   button.navbar-toggle.collapsed{
+    border-color: #1e1e1e;
    }
    nav a:hover{
      background-color: #738a6b !important;
    }
+   .navbar-default .navbar-nav > li > a {
+     color: #d1cfcf;
+   }
+   .navbar-default .navbar-brand{
+     color: #d1cfcf;
+   }
    .jumbotron {
-     color: #000000;
+    background-color: rgba(47, 57, 52, 0.78);
+   }
+   .jumbotron a{
+     border-radius: 50px !important;
+     border-color: #d1cfcf;
+     padding: 0.5% 5% 0.5% 5%;
    }
    .black {
      color : #000000 !important;
    }
 br+p{
   text-align: justify;
+}
+i{
+  color: black;
 }
 
 .thumbnail img {
@@ -170,4 +206,10 @@ br+p{
     border-color: #ebccd1;
   }
 
+}
+.row.text-center.animated{
+  animation-duration: 2s !important;
+}
+.jumbotron.animated.fadeIn{
+    animation-duration: 4s !important;
 }

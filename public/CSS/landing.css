@@ -79,9 +79,15 @@ body {
 .no-cssanimations .slideshow li {
 	opacity: 1;
 }
+
 .btn-info{
   background-color: #8f9090 !important;
-  border-color: #ffffff;
+  border-color: #000011;
+  padding: 0.5% 7% 0.5% 7%;
+
+}
+.animated{
+  animation-duration: 2s;
 }
 a:hover{
   transition: 2s linear;
@@ -90,4 +96,10 @@ a:hover{
 h1:hover{
   transition: 2s linear;
   color: #ebebeb !important;
+}
+i{
+  color: #457c6e;
+}
+a i {
+  color: #ebebeb;
 }
