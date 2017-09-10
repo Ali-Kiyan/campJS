@@ -15,12 +15,13 @@ var   commentRoutes   = require("./routes/comments"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes      = require("./routes/index");
 
-console.log();
 
 //creating and connceting to the databse.
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DATABASEURL);
+//backup url in case of loss of any env varibales
+var dbURL = process.env.DATABASEURL || "mongodb://localhost/camp_js"
+mongoose.connect(dbURL);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
@@ -71,6 +72,8 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //     console.log(campground);
 //   }
 // });
+
+//backup port in case of any sort of loss
 
 var port = process.env.PORT || 5000
 
