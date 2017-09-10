@@ -72,15 +72,15 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //   }
 // });
 
-// var port = process.env.PORT || 5000
-//
-// app.listen(port, function(req, res){
-//
-// console.log("campJS Server is running ...");
-//
-// });
+var port = process.env.PORT || 5000
+
+app.listen(port, function(req, res){
+
+console.log("campJS Server is running ...");
+
+});
 
 //this type of listening is for listening locally
-app.listen(3000, function(req, res){
-  console.log("campJS server is running...");
-});
+// app.listen(3000, function(req, res){
+//   console.log("campJS server is running...");
+// });
