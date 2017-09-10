@@ -15,12 +15,12 @@ var   commentRoutes   = require("./routes/comments"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes      = require("./routes/index");
 
+console.log();
+
 //creating and connceting to the databse.
 
 mongoose.Promise = global.Promise;
-// mongoose.connect("mongodb://localhost/camp_js");
-mongoose.connect("campjs:lion13@ds131384.mlab.com:31384/campjs");
-// mongodb://campjs:lion13@ds131384.mlab.com:31384/campjs
+mongoose.connect(process.env.DATABASEURL);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
@@ -72,15 +72,15 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //   }
 // });
 
-var port = process.env.PORT || 5000
-
-app.listen(port, function(req, res){
-
-console.log("campJS Server is running ...");
-
-});
+// var port = process.env.PORT || 5000
+//
+// app.listen(port, function(req, res){
+//
+// console.log("campJS Server is running ...");
+//
+// });
 
 //this type of listening is for listening locally
-// app.listen(3000, function(req, res){
-//   console.log("campJS server is running...");
-// });
+app.listen(3000, function(req, res){
+  console.log("campJS server is running...");
+});
