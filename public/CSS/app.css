@@ -18,13 +18,13 @@
 
    }
    #gold{
-     text-align: left;
+     /*text-align: left;
      background-color: #988d73;
-     border-color: #846b6b;
+     border-color: #846b6b;*/
    }
    #gold i{
-     color: #d6cd44 ;
-     float: right !important;
+     /*color: #d6cd44 ;
+     float: right !important;*/
 
    }
    a:hover{
