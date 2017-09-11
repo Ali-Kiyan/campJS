@@ -1,4 +1,4 @@
-  @font-face {
+  /*@font-face {
     font-family: 'glyphicons-halflings-regular';
     src: url('glyphicons-halflings-regular.eot');
     src: local('☺'),
@@ -11,7 +11,7 @@
       font-family: 'Glyphicons Halflings';
       src: url('../fonts/glyphicons-halflings-regular.eot');
       src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-    }
+    }*/
 
    *{
     border-radius: 0 !important;
@@ -21,7 +21,6 @@
      text-align: left;
      background-color: #988d73;
      border-color: #846b6b;
-     font-family: inherit !important;
    }
    #gold i{
      color: #d6cd44 ;
