@@ -15,6 +15,9 @@ body {
   color: #fff;
   font-size: 50px;
 }
+p{
+display: inline-block;
+}
 .slideshow {
   position: fixed;
   width: 100%;
