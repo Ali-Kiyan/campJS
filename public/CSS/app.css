@@ -17,6 +17,16 @@
     border-radius: 0 !important;
 
    }
+   #gold{
+     text-align: left;
+     background-color: #988d73;
+     border-color: #846b6b;
+   }
+   #gold i{
+     color: #d6cd44 ;
+     float: right !important;
+
+   }
    a:hover{
      color: #000000;
    }
