@@ -26,6 +26,12 @@
      color: #d6cd44 ;
      float: right !important;
    }
+   #gold:hover{
+     background-color: #eaeaea;
+   }
+   .hover:hover{
+    background-color: #eaeaea;
+   }
 
    a:hover{
      color: #000000;
