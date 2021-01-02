@@ -22,7 +22,7 @@ var   commentRoutes   = require("./routes/comments"),
 mongoose.Promise = global.Promise;
 //backup url in case of loss of any env varibales
 var dbURL = process.env.DATABASEURL || "mongodb://localhost/camp_js"
-mongoose.connect(dbURL);
+mongoose.connect(dbURL, { useMongoClient: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
