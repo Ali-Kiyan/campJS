@@ -1,11 +1,12 @@
 var express          = require('express'),
-      app           = express(),
+      app            = express(),
       bodyParser     = require("body-parser"),
       mongoose       = require("mongoose"),
+      mongoClient    = require('mongodb').MongoClient,
       flash          = require("connect-flash"),
       passport       = require("passport"),
       LocalStrategy  = require("passport-local"),
-      methodOverride  = require("method-override")
+      methodOverride = require("method-override")
       Campground     = require("./models/campground"),
       Comment        = require("./models/comment"),
       User           = require("./models/user"),
@@ -21,7 +22,7 @@ var   commentRoutes   = require("./routes/comments"),
 mongoose.Promise = global.Promise;
 //backup url in case of loss of any env varibales
 var dbURL = process.env.DATABASEURL || "mongodb://localhost/camp_js"
-mongoose.connect(dbURL);
+mongoClient.connect(dbURL);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
